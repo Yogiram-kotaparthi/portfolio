@@ -15,7 +15,7 @@
     }
 
     .navbar {
-      background-color: #111;
+      background-color: #000 !important;
     }
 
     .nav-link {
@@ -51,9 +51,12 @@
 
     section {
       padding: 60px 20px;
+      background-color: #000;
     }
 
-    #about, #skills, #projects {
+    #about,
+    #skills,
+    #projects {
       background-color: #111;
       border-radius: 10px;
       margin-bottom: 40px;
@@ -61,6 +64,11 @@
 
     h2 {
       color: #00ffff;
+    }
+
+    #skills ul {
+      list-style: none;
+      padding: 0;
     }
 
     #skills ul li {
@@ -78,7 +86,7 @@
     }
 
     footer {
-      background-color: #111;
+      background-color: #000;
       color: #aaa;
       text-align: center;
       padding: 20px;
@@ -117,18 +125,26 @@
     </div>
 
     <div class="mt-4">
-      <a href="Yogiram_Kotaparthi_Resume.pdf" class="btn btn-light btn-lg fw-bold" download>
+      <a href="Yogiram_Kotaparthi_Resume.pdf" class="btn btn-light btn-lg fw-bold" target="_blank" download>
         <i class="bi bi-download me-2"></i>Download Resume
       </a>
     </div>
 
-    <p class="mt-4"><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com | <strong>Location:</strong> Farmington, MI</p>
+    <p class="mt-4"><strong>Phone:</strong> +1 313-536-0569 |
+      <strong>Email:</strong> kotaparthiy@gmail.com |
+      <strong>Location:</strong> Farmington, MI
+    </p>
   </section>
 
   <main class="container">
     <section id="about">
       <h2>About Me</h2>
-      <p>I am a passionate and detail-oriented Full Stack Java Developer with over 8 years of experience building scalable enterprise applications. I specialize in Java, Spring Boot, REST APIs, and front-end development using Angular and React. I’ve worked in Automotive, Banking, and Healthcare sectors, delivering full-cycle software development from concept to deployment and support. I love solving complex problems and always strive for high-performance, maintainable solutions. My experience also includes working in Agile/Scrum teams, and I have a strong foundation in CI/CD, Jenkins, Docker, and cloud deployment on AWS.</p>
+      <p>
+        I am a passionate and detail-oriented Full Stack Java Developer with over 8 years of experience building scalable enterprise applications. I specialize in Java, Spring Boot, REST APIs, and front-end development using Angular and React.
+        I’ve worked in Automotive, Banking, and Healthcare sectors, delivering full-cycle software development from concept to deployment and support.
+        I love solving complex problems and always strive for high-performance, maintainable solutions. My experience also includes working in Agile/Scrum teams,
+        and I have a strong foundation in CI/CD, Jenkins, Docker, and cloud deployment on AWS.
+      </p>
     </section>
 
     <section id="skills">
@@ -157,15 +173,25 @@
       <h2>Projects</h2>
       <div class="project-item">
         <h5>Automotive IoT Platform</h5>
-        <p>Developed a Spring Boot backend to handle real-time telemetry data from connected vehicles, integrated with Angular dashboard. Used Kafka for streaming and PostgreSQL for storage. Deployed on AWS ECS with Docker.</p>
+        <p>
+          Developed a Spring Boot backend to handle real-time telemetry data from connected vehicles, integrated with Angular dashboard.
+          Used Kafka for streaming and PostgreSQL for storage. Deployed on AWS ECS with Docker.
+        </p>
       </div>
       <div class="project-item">
         <h5>Healthcare Claims Processing</h5>
-        <p>Created a microservices-based Java application to automate health insurance claim processing. Integrated with external systems via REST and SOAP. Used Jenkins for CI/CD and JUnit for unit testing.</p>
+        <p>
+          Created a microservices-based Java application to automate health insurance claim processing.
+          Integrated with external systems via REST and SOAP. Used Jenkins for CI/CD and JUnit for unit testing.
+        </p>
       </div>
       <div class="project-item">
         <h5>Banking Transaction Portal</h5>
-        <p>Designed a secure banking portal using Spring Security and React. Implemented real-time transaction updates using WebSockets and JWT-based authentication. Followed Agile practices and Gitflow methodology.</p>
+        <p>
+          Designed a secure banking portal using Spring Security and React.
+          Implemented real-time transaction updates using WebSockets and JWT-based authentication.
+          Followed Agile practices and Gitflow methodology.
+        </p>
       </div>
     </section>
   </main>
