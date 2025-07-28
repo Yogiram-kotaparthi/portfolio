@@ -2,189 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yogiram Kotaparthi | Java Full Stack Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yogiram Kotaparthi Portfolio</title>
   <style>
+    /* Background and base */
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #e0f7fa; /* Soft bright cyan */
+      color: #1a1a1a;
+      line-height: 1.6;
     }
-    .hero {
-      background-color: #fff3f3;
-      padding: 80px 20px;
+    header {
+      background: #0288d1; /* Bright blue */
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      box-shadow: 0 3px 10px rgba(2,136,209,0.4);
+      user-select: none;
+    }
+    main {
+      max-width: 960px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      margin-bottom: 3.2rem;
+      padding: 2rem 2.4rem;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 10px 25px rgba(2,136,209,0.25);
+    }
+    /* Section headings */
+    h2 {
+      color: #0288d1;
+      border-bottom: 3px solid #0288d1;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+    /* Skills highlight */
+    #skills {
+      background: #fff9e6; /* Soft warm yellow */
+      border-left: 10px solid #ff7043; /* bright coral */
+    }
+    #skills h2 {
+      color: #ff7043; /* coral */
+      border-color: #ff7043;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+      color: #444;
+      font-size: 1rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #222;
+    }
+    /* Contact links */
+    .contact-info a {
+      color: #0288d1;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.25s ease;
+    }
+    .contact-info a:hover {
+      color: #ff7043;
+      text-decoration: underline;
+    }
+    /* Resume and image container */
+    .resume-link, .profile-img {
+      margin-top: 1.4rem;
       text-align: center;
     }
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
+    .profile-img img {
+      max-width: 160px;
       border-radius: 50%;
-      border: 4px solid #dc3545;
-      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(255,112,67,0.4);
+      transition: transform 0.3s ease;
+      cursor: default;
     }
-    .section {
-      padding: 60px 20px;
+    .profile-img img:hover {
+      transform: scale(1.05);
     }
-    .services .card, .projects .card {
-      transition: 0.3s;
-    }
-    .services .card:hover, .projects .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #343a40;
+    .resume-link a {
+      background: #ff7043;
       color: white;
-      padding: 40px 0;
+      padding: 0.75rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255,112,67,0.6);
+      display: inline-block;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
     }
-    .social-icons a {
-      color: #343a40;
-      font-size: 1.5rem;
-      margin: 0 10px;
+    .resume-link a:hover {
+      background: #e35b2f;
+      box-shadow: 0 6px 18px rgba(227,91,47,0.8);
     }
-    .social-icons a:hover {
-      color: #dc3545;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 0 0.5rem;
+      }
+      section {
+        padding: 1.5rem 1.2rem;
+      }
+      header {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Yogiram Kotaparthi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    Yogiram Kotaparthi — Full Stack Developer
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Yogiram Kotaparthi, a passionate Java Full Stack Developer based in Farmington, MI.
+        With extensive experience in backend and frontend technologies, I build scalable, performant web applications.
+        I enjoy working with Java, Spring Boot, and React, and continuously learning new tools and frameworks to improve user experience and system reliability.
+        My approach combines solid engineering principles with creative problem-solving.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Backend:</strong> Java, Spring Boot, Hibernate, REST APIs</li>
+        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React.js, Redux</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, JPA</li>
+        <li><strong>Tools:</strong> Git, GitHub, Maven, Gradle, Jenkins, Docker</li>
+        <li><strong>Cloud & Deployment:</strong> AWS basics, CI/CD pipelines, containerization</li>
+        <li><strong>Testing:</strong> JUnit, Mockito, Selenium basics</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Portfolio Website:</strong> Designed and developed a fully responsive portfolio website using React and CSS Grid/Flexbox.
+          It features smooth navigation, mobile responsiveness, and showcases my skills, projects, and contact details.
+          This helped me gain better visibility and improved professional networking opportunities.
+        </li>
+        <li>
+          <strong>E-commerce Application:</strong> Developed a full-stack e-commerce web application using Spring Boot for backend and React for frontend.
+          Implemented user authentication, product browsing, shopping cart, and payment integration with Stripe API.
+          Focused on clean architecture, secure API endpoints, and a seamless user experience.
+        </li>
+        <li>
+          <strong>Task Manager REST API:</strong> Built a secure RESTful API for managing tasks with CRUD operations.
+          Utilized Spring Security with JWT tokens for authentication and role-based authorization.
+          Followed best practices for API versioning, validation, and exception handling.
+        </li>
+        <li>
+          <strong>Real-Time Chat Application:</strong> Created a real-time chat application using WebSocket technology with Spring Boot backend.
+          Features include multiple chat rooms, private messaging, and user presence indicators.
+          Emphasized low-latency message delivery and robust error handling.
+        </li>
+        <li>
+          <strong>Employee Management System:</strong> Developed a web app for managing employee data and attendance using Spring Boot and Thymeleaf.
+          Included role-based access control, reporting dashboards, and export features.
+          Improved data consistency and helped streamline HR processes.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me through any of the following:</p>
+      <div class="contact-info">
+        <p>Phone: <a href="tel:+13135360569">+1 313-536-0569</a></p>
+        <p>Email: <a href="mailto:kotaparthiy@gmail.com">kotaparthiy@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank" rel="noopener noreferrer">linkedin.com/in/yogiram-kotaparthi</a></p>
+        <p>GitHub: <a href="https://github.com/Yogiram-kotaparthi" target="_blank" rel="noopener noreferrer">github.com/Yogiram-kotaparthi</a></p>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <section id="home" class="hero">
-    <img src="yogi-image.jpeg" alt="Profile" class="profile-img">
-    <h1 class="display-5 fw-bold">Yogiram Kotaparthi</h1>
-    <p class="lead">Java Full Stack Developer | 8+ years of experience in Automotive, Banking, and Healthcare</p>
-    <div class="social-icons my-3">
-      <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/Yogiram-kotaparthi" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="mailto:kotaparthiy@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-      <a href="Yogiram_Kotaparthi_Resume.pdf" download><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
-    </div>
-    <p><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com | <strong>Location:</strong> Farmington, MI</p>
-  </section>
-
-  <section id="about" class="section bg-light text-center">
-    <div class="container">
-      <h2 class="mb-5">About Me</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <p class="lead">
-            I'm a passionate Java Full Stack Developer with 8+ years of experience delivering full lifecycle software development for diverse industries including automotive, finance, and healthcare. I specialize in building robust backend microservices using Java (8–17), Spring Boot, and integrating with modern frontend frameworks like ReactJS and Angular.
-          </p>
-          <p>
-            I have hands-on expertise in DevOps tools such as Jenkins, Docker, Kubernetes, and deployment on AWS, Azure, and GCP. Known for writing clean, scalable, and testable code, I'm also committed to agile best practices, CI/CD automation, and team collaboration.
-          </p>
-          <p>
-            My mission is to build secure, efficient, and user-centric solutions that solve real-world problems. I’m a strong communicator who thrives in collaborative environments and continuously seeks to upgrade my tech skills.
-          </p>
-        </div>
+    <!-- Resume Section -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download my detailed resume here:</p>
+      <div class="resume-link">
+        <a href="Yogiram_Kotaparthi_Resume.pdf" download>Download Resume (PDF)</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="section services text-center">
-    <div class="container">
-      <h2 class="mb-5">Core Skills</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>Frontend</h5>
-            <p>ReactJS, Angular (6–12), TypeScript, HTML5, CSS3, Bootstrap, Tailwind</p>
-            <h5>Backend</h5>
-            <p>Java (8–17), Spring Boot, Spring MVC, Microservices, REST APIs, Hibernate</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>Cloud & DevOps</h5>
-            <p>AWS (EC2, S3, Lambda, CloudFormation), Azure, GCP</p>
-            <p>Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>Tools & Testing</h5>
-            <p>Maven, Gradle, Git, Postman, JMeter, JUnit, Selenium, Mockito</p>
-            <p>Monitoring: Prometheus, Grafana, ELK Stack</p>
-            <p>Security: Spring Security, OAuth2, JWT</p>
-          </div>
-        </div>
+    <!-- Profile Image Section -->
+    <section id="profile-image">
+      <h2>Profile Image</h2>
+      <div class="profile-img">
+        <img src="yogi-image.jpeg" alt="Yogiram Kotaparthi Profile Image" />
       </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section projects text-center">
-    <div class="container">
-      <h2 class="mb-5">Key Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Ford Motor Company</h5>
-              <p>Developed scalable and secure microservices using Java 17 and Spring Boot. Created dynamic UIs using ReactJS. Integrated Kafka for real-time data streaming. Dockerized services deployed in AWS Kubernetes clusters.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">JPMorgan Chase</h5>
-              <p>Delivered enterprise banking applications using Spring Boot and Angular. Managed authentication with Spring Security and JWT. Set up CI/CD with Jenkins and GitHub. Implemented Kafka messaging and cloud deployment pipelines.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Apollo Hospitals</h5>
-              <p>Built Angular frontends and REST APIs to digitize patient record systems. Ensured HIPAA compliance and data privacy. Integrated 3rd party services using OAuth2 and developed backend with Spring Boot and MySQL.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section bg-dark text-white text-center">
-    <div class="container">
-      <h2 class="mb-4">Let's Connect</h2>
-      <p class="mb-4">Looking to collaborate or hire a seasoned full stack developer? Let's talk!</p>
-      <a href="mailto:kotaparthiy@gmail.com" class="btn btn-outline-light btn-lg">
-        <i class="bi bi-envelope me-2"></i>Contact Me
-      </a>
-    </div>
-  </section>
-
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Yogiram Kotaparthi. All Rights Reserved.</p>
-      <p>Email: kotaparthiy@gmail.com | Phone: +1 313-536-0569</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+  </main>
 </body>
 </html>
