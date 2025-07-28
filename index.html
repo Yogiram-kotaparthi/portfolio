@@ -1,196 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yogiram Kotaparthi | Java Full Stack Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogiram Kotaparthi - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff0f0; /* very light pink */
-      color: #222;
+      background-color: #000;
+      color: #fff;
     }
+
     .navbar {
-      background-color: #ff4b5c; /* bright coral red */
-      border-bottom: 3px solid #b32e3a; /* darker thick border */
+      background-color: #111;
     }
-    .navbar-brand, .nav-link {
-      color: white !important;
-      font-weight: 700;
-      font-size: 1.1rem;
+
+    .nav-link {
+      color: #fff !important;
     }
-    .nav-link:hover {
-      color: #ffe3e6 !important;
-      text-decoration: underline;
-    }
-    .navbar-toggler {
-      border-color: #ffe3e6;
-    }
-    .navbar-toggler-icon {
-      filter: invert(100%);
-    }
-    /* Hero Section */
+
     .hero {
-      background: #ff6f91; /* bright pink */
-      color: white;
-      padding: 80px 20px;
       text-align: center;
-      box-shadow: 0 6px 20px rgba(255, 111, 145, 0.6);
-      user-select: none;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #222, #000);
     }
+
     .profile-img {
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      border: 6px solid #fff;
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px #00ffff;
       margin-bottom: 20px;
-      box-shadow: 0 0 12px #ff6f91;
-      transition: transform 0.3s ease;
     }
-    .profile-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 24px #ff385f;
-    }
+
     .social-icons a {
-      color: white;
-      font-size: 1.8rem;
-      margin: 0 14px;
-      transition: color 0.3s ease;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #00ffff;
+      transition: color 0.3s;
     }
+
     .social-icons a:hover {
-      color: #ffe3e6;
+      color: #ffcc00;
     }
-    /* Sections */
-    .section {
+
+    section {
       padding: 60px 20px;
-      border-radius: 12px;
-      max-width: 960px;
-      margin: 0 auto 40px;
-      box-shadow: 0 6px 30px rgba(255, 111, 145, 0.2);
     }
-    #about {
-      background: #ffd1dc; /* very light coral */
-      color: #5a1a23;
-      font-weight: 500;
+
+    #about, #skills, #projects {
+      background-color: #111;
+      border-radius: 10px;
+      margin-bottom: 40px;
     }
-    #skills {
-      background: #ff4b5c; /* bright coral red */
-      color: white;
-      border-left: 12px solid #b32e3a; /* thick dark coral border */
-      font-weight: 600;
-      box-shadow: 0 0 30px #b32e3a;
+
+    h2 {
+      color: #00ffff;
     }
-    #skills h2 {
-      color: #fff8f8;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+
+    #skills ul li {
+      display: inline-block;
+      background-color: #ff7043;
+      color: #000;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
     }
-    #skills .card {
-      background: #ff667e; /* lighter coral pink */
-      border: none;
-      color: white;
-      font-weight: 600;
-      box-shadow: 0 6px 20px rgba(179, 46, 58, 0.7);
-      transition: background 0.3s ease, transform 0.3s ease;
+
+    .project-item {
+      margin-bottom: 20px;
     }
-    #skills .card:hover {
-      background: #b32e3a; /* dark coral */
-      transform: translateY(-7px);
-      box-shadow: 0 10px 30px rgba(179, 46, 58, 1);
-      cursor: default;
-    }
-    #projects {
-      background: #fff0f0;
-      color: #8b0000;
-      font-weight: 500;
-    }
-    #projects .card {
-      box-shadow: 0 6px 20px rgba(255, 111, 145, 0.2);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-    #projects .card:hover {
-      box-shadow: 0 10px 35px rgba(255, 111, 145, 0.5);
-      transform: translateY(-6px);
-      cursor: default;
-    }
-    #contact {
-      background: #b32e3a; /* dark coral */
-      color: white;
-      padding-bottom: 80px;
-      padding-top: 80px;
-      box-shadow: 0 8px 30px rgba(179, 46, 58, 0.7);
-    }
-    #contact h2 {
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 1.5rem;
-    }
-    #contact p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    #contact a.btn {
-      font-weight: 700;
-      padding: 0.85rem 2.2rem;
-      font-size: 1.2rem;
-      border: 3px solid white;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      color: white !important;
-      background-color: transparent;
-    }
-    #contact a.btn:hover {
-      background-color: white !important;
-      color: #b32e3a !important;
-      border-color: #b32e3a !important;
-      text-decoration: none;
-    }
+
     footer {
-      background: #b32e3a;
-      color: white;
-      padding: 30px 20px;
+      background-color: #111;
+      color: #aaa;
       text-align: center;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-    footer p {
-      margin: 0.25rem 0;
-    }
-    /* Responsive tweaks */
-    @media (max-width: 767px) {
-      .hero {
-        padding: 60px 15px;
-      }
-      .section {
-        padding: 40px 15px;
-      }
-      #skills .card, #projects .card {
-        font-size: 0.9rem;
-      }
-      #contact a.btn {
-        font-size: 1rem;
-        padding: 0.7rem 1.5rem;
-      }
+      padding: 20px;
     }
   </style>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Yogiram Kotaparthi</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <a class="navbar-brand" href="#">Yogiram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -199,146 +100,81 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
     <img src="yogi-image.jpeg" alt="Profile" class="profile-img" />
     <h1 class="display-5 fw-bold">Yogiram Kotaparthi</h1>
     <p class="lead">Java Full Stack Developer | 8+ years of experience in Automotive, Banking, and Healthcare</p>
+
     <div class="social-icons my-3">
-      <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/Yogiram-kotaparthi" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Yogiram-kotaparthi" target="_blank"><i class="bi bi-github"></i></a>
       <a href="mailto:kotaparthiy@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-      <a href="Yogiram_Kotaparthi_Resume.pdf" download><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
     </div>
-    <p><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com | <strong>Location:</strong> Farmington, MI</p>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="mb-5 text-center">About Me</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <p class="lead">
-            I am a highly skilled and motivated Java Full Stack Developer with over 8 years of experience in building scalable, secure, and performance-driven web applications.
-            I've contributed to major projects across industries like Automotive (Ford), Banking (JPMorgan Chase), and Healthcare (Apollo Hospitals).
-          </p>
-          <p>
-            My core stack includes Java (8–17), Spring Boot, REST APIs, Angular (6–12), ReactJS, TypeScript, and Microservices architecture. I excel in cloud platforms such as AWS, Azure, and GCP, with strong proficiency in DevOps tools like Docker, Kubernetes, Jenkins, and GitHub Actions.
-          </p>
-          <p>
-            I work in Agile/Scrum environments, focusing on clean architecture, test-driven development, and CI/CD pipelines. I enjoy problem-solving and optimizing solutions for performance and maintainability.
-            Whether it's designing an API contract, debugging production issues, or mentoring juniors, I bring passion and professionalism to the table.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="mb-5 text-center">Core Skills</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-4">
-            <i class="bi bi-code-slash fs-1 mb-3"></i>
-            <h5>Frontend Development</h5>
-            <p>ReactJS, Angular (6–12), TypeScript, HTML5, CSS3, Bootstrap, Tailwind</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <i class="bi bi-server fs-1 mb-3"></i>
-            <h5>Backend Development</h5>
-            <p>Java (8–17), Spring Boot, Microservices, Hibernate, REST APIs, JPA</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <i class="bi bi-cloud-arrow-up fs-1 mb-3"></i>
-            <h5>Cloud & DevOps</h5>
-            <p>AWS, Azure, Docker, Kubernetes, Jenkins, GitHub Actions</p>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mt-4">
-        <div class="col-md-6">
-          <div class="card p-4">
-            <i class="bi bi-shield-check fs-1 mb-3"></i>
-            <h5>Security & Testing</h5>
-            <p>OAuth 2.0, JWT, Spring Security, JUnit, Mockito, Selenium, Postman, JMeter</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card p-4">
-            <i class="bi bi-graph-up fs-1 mb-3"></i>
-            <h5>Monitoring & Logging</h5>
-            <p>ELK Stack, Prometheus, Grafana, Log4j</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="mb-5 text-center">Key Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Ford Motor Company</h5>
-              <p>Built Java 17 microservices, ReactJS front-end, secured with OAuth2/JWT. Integrated Kafka and Kubernetes for scalable deployment on AWS.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">JPMorgan Chase</h5>
-              <p>Created scalable microservices and UIs for banking apps. Implemented CI/CD pipelines using Jenkins and Docker, ensured security via OAuth2.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Apollo Hospitals</h5>
-              <p>Developed healthcare platforms using Spring Boot & Angular 8. Ensured HIPAA compliance, secure access, and API integrations with lab systems.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container text-center" style="background:#b32e3a; color:white; border-radius:12px; padding: 60px 30px;">
-      <h2 class="mb-4">Let's Connect</h2>
-      <p class="mb-4 fs-5">Looking to collaborate or hire a seasoned full stack developer? Let's talk!</p>
-      <a href="mailto:kotaparthiy@gmail.com" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold" style="border-width:3px;">
-        <i class="bi bi-envelope me-2"></i>Contact Me
+    <div class="mt-4">
+      <a href="Yogiram_Kotaparthi_Resume.pdf" class="btn btn-light btn-lg fw-bold" download>
+        <i class="bi bi-download me-2"></i>Download Resume
       </a>
     </div>
+
+    <p class="mt-4"><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com | <strong>Location:</strong> Farmington, MI</p>
   </section>
 
-  <!-- Footer -->
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a passionate and detail-oriented Full Stack Java Developer with over 8 years of experience building scalable enterprise applications. I specialize in Java, Spring Boot, REST APIs, and front-end development using Angular and React. I’ve worked in Automotive, Banking, and Healthcare sectors, delivering full-cycle software development from concept to deployment and support. I love solving complex problems and always strive for high-performance, maintainable solutions. My experience also includes working in Agile/Scrum teams, and I have a strong foundation in CI/CD, Jenkins, Docker, and cloud deployment on AWS.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>Microservices</li>
+        <li>REST APIs</li>
+        <li>Hibernate</li>
+        <li>MySQL</li>
+        <li>Angular</li>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>HTML/CSS</li>
+        <li>Jenkins</li>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>AWS</li>
+        <li>Agile/Scrum</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <h5>Automotive IoT Platform</h5>
+        <p>Developed a Spring Boot backend to handle real-time telemetry data from connected vehicles, integrated with Angular dashboard. Used Kafka for streaming and PostgreSQL for storage. Deployed on AWS ECS with Docker.</p>
+      </div>
+      <div class="project-item">
+        <h5>Healthcare Claims Processing</h5>
+        <p>Created a microservices-based Java application to automate health insurance claim processing. Integrated with external systems via REST and SOAP. Used Jenkins for CI/CD and JUnit for unit testing.</p>
+      </div>
+      <div class="project-item">
+        <h5>Banking Transaction Portal</h5>
+        <p>Designed a secure banking portal using Spring Security and React. Implemented real-time transaction updates using WebSockets and JWT-based authentication. Followed Agile practices and Gitflow methodology.</p>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Yogiram Kotaparthi. All Rights Reserved.</p>
-      <p>Email: kotaparthiy@gmail.com | Phone: +1 313-536-0569</p>
-    </div>
+    <p>&copy; 2025 Yogiram Kotaparthi. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
