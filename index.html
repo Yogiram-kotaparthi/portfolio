@@ -12,9 +12,17 @@
       background-color: #f9f9f9;
     }
     .hero {
-      background-color: #ffecec;
+      background-color: #fff3f3;
       padding: 80px 20px;
       text-align: center;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #dc3545;
+      margin-bottom: 20px;
     }
     .section {
       padding: 60px 20px;
@@ -31,22 +39,37 @@
       color: white;
       padding: 40px 0;
     }
+    .social-icons a {
+      color: #343a40;
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+    .social-icons a:hover {
+      color: #dc3545;
+    }
   </style>
 </head>
 <body>
   <header class="p-3 bg-white border-bottom">
-    <div class="container d-flex justify-content-between">
-      <h2>Yogiram Kotaparthi</h2>
+    <div class="container d-flex justify-content-between align-items-center">
+      <h2 class="m-0">Yogiram Kotaparthi</h2>
       <div>
         <a href="#projects" class="btn btn-danger me-2">Browse Projects</a>
-        <a href="#contact" class="btn btn-outline-dark">Download CV</a>
+        <a href="your-resume.pdf" download class="btn btn-outline-dark">Download Resume</a>
       </div>
     </div>
   </header>
 
   <section class="hero">
-    <h1 class="display-5 fw-bold">Hello, I'm Yogiram Kotaparthi<br>A Web Developer</h1>
-    <p class="lead">Java Full Stack Developer with 8+ years of experience building secure, scalable web applications.</p>
+    <img src="your-image.jpg" alt="Profile" class="profile-img">
+    <h1 class="display-5 fw-bold">Yogiram Kotaparthi</h1>
+    <p class="lead">Java Full Stack Developer | 8+ years of experience across healthcare and enterprise applications</p>
+    <div class="social-icons my-3">
+      <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/yourusername" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="mailto:kotaparthiy@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+    <p><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com</p>
   </section>
 
   <section class="section services text-center">
@@ -57,21 +80,21 @@
           <div class="card p-4">
             <i class="bi bi-window fs-1 mb-3"></i>
             <h5>Frontend Development</h5>
-            <p>ReactJS, Angular, HTML5, CSS3, Bootstrap, Tailwind CSS</p>
+            <p>ReactJS, Angular (6–12), HTML5, CSS3, Bootstrap, Tailwind CSS</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card p-4">
             <i class="bi bi-hdd-network fs-1 mb-3"></i>
             <h5>Backend Development</h5>
-            <p>Java, Spring Boot, REST APIs, Microservices, Hibernate</p>
+            <p>Java (8–17), Spring Boot, REST APIs, Microservices, Hibernate</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card p-4">
             <i class="bi bi-cloud-upload fs-1 mb-3"></i>
             <h5>DevOps & Cloud</h5>
-            <p>Docker, Kubernetes, AWS, Jenkins, GitHub Actions</p>
+            <p>AWS, Docker, Kubernetes, Jenkins, GitHub Actions</p>
           </div>
         </div>
       </div>
@@ -83,11 +106,13 @@
       <h2 class="mb-5">About Me</h2>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <p class="lead">I'm a certified Java and AWS developer with deep expertise in full stack development. I've delivered enterprise solutions for automotive, healthcare, and finance sectors.</p>
+          <p class="lead">
+            I'm a certified Java and AWS Full Stack Developer with 8+ years of experience in developing secure, scalable, and maintainable applications for domains like automotive, healthcare, and enterprise systems.
+          </p>
           <ul class="list-unstyled">
-            <li><strong>Experience:</strong> 8+ years</li>
-            <li><strong>Certifications:</strong> OCA Java SE 8, AWS Solutions Architect Associate</li>
-            <li><strong>Cloud:</strong> AWS, Azure, GCP</li>
+            <li><strong>Certifications:</strong> Java Full Stack Developer, Java Web Internship</li>
+            <li><strong>Cloud Experience:</strong> AWS (EC2, S3, Lambda, RDS), Azure, GCP</li>
+            <li><strong>CI/CD Tools:</strong> Jenkins, Maven, GitHub Actions, GitLab</li>
           </ul>
         </div>
       </div>
@@ -96,13 +121,13 @@
 
   <section id="projects" class="section text-center">
     <div class="container">
-      <h2 class="mb-5">Latest Projects</h2>
+      <h2 class="mb-5">Key Projects</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Ford Motor Company</h5>
-              <p>Built microservices with Java 17, Spring Boot, Docker, ReactJS for enterprise systems.</p>
+              <p>Developed Java 17 microservices, ReactJS front-end, secured with OAuth2/JWT. Integrated Kafka and Kubernetes for scalable deployment.</p>
             </div>
           </div>
         </div>
@@ -110,7 +135,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">NexaSoft Technologies</h5>
-              <p>Developed Angular 12 UI and backend APIs using Spring Boot and PostgreSQL with CI/CD automation.</p>
+              <p>Angular 12 UIs, Spring Boot backends, CI/CD with Docker & Jenkins, integrated PostgreSQL and optimized API communication.</p>
             </div>
           </div>
         </div>
@@ -118,7 +143,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">InfoNova Systems</h5>
-              <p>Delivered secure, scalable apps with ReactJS, Spring Boot, JWT, and Kubernetes.</p>
+              <p>Designed secure REST APIs, Angular apps, Spring Security integration, and deployed apps on AWS cloud platforms.</p>
             </div>
           </div>
         </div>
@@ -128,20 +153,17 @@
 
   <section id="contact" class="section bg-dark text-white text-center">
     <div class="container">
-      <h2 class="mb-4">Let's Talk</h2>
-      <p class="mb-4">Have a project in mind or want to collaborate? I'm open to opportunities!</p>
-      <a href="mailto:kotaparthiy@gmail.com" class="btn btn-outline-light">Contact Me</a>
+      <h2 class="mb-4">Let's Connect</h2>
+      <p class="mb-4">Interested in collaborating or hiring me? Let's discuss your project!</p>
+      <a href="mailto:kotaparthiy@gmail.com" class="btn btn-outline-light btn-lg"><i class="bi bi-envelope me-2"></i>Contact Me</a>
     </div>
   </section>
 
   <footer class="text-center">
     <div class="container">
       <p class="mb-0">&copy; 2025 Yogiram Kotaparthi. All Rights Reserved.</p>
-      <p>Email: yogiramkotaparthi23@gmail.com | Phone: +1 3135360569</p>
+      <p>Email: kotaparthiy@gmail.com | Phone: +1 313-536-0569</p>
     </div>
   </footer>
-
 </body>
 </html>
-
-
