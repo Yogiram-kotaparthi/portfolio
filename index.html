@@ -10,10 +10,7 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
-    }
-    .navbar {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
+      scroll-behavior: smooth;
     }
     .hero {
       background-color: #fff3f3;
@@ -31,10 +28,10 @@
     .section {
       padding: 60px 20px;
     }
-    .services .card {
+    .services .card, .projects .card {
       transition: 0.3s;
     }
-    .services .card:hover {
+    .services .card:hover, .projects .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
@@ -51,11 +48,14 @@
     .social-icons a:hover {
       color: #dc3545;
     }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Yogiram Kotaparthi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -73,7 +73,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
     <img src="yogi-image.jpeg" alt="Profile" class="profile-img">
     <h1 class="display-5 fw-bold">Yogiram Kotaparthi</h1>
@@ -82,81 +81,62 @@
       <a href="https://www.linkedin.com/in/yogiram-kotaparthi" target="_blank"><i class="bi bi-linkedin"></i></a>
       <a href="https://github.com/Yogiram-kotaparthi" target="_blank"><i class="bi bi-github"></i></a>
       <a href="mailto:kotaparthiy@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-      <a href="Yogiram_Kotaparthi_Resume.docx" download><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
+      <a href="Yogiram_Kotaparthi_Resume.pdf" download><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
     </div>
     <p><strong>Phone:</strong> +1 313-536-0569 | <strong>Email:</strong> kotaparthiy@gmail.com | <strong>Location:</strong> Farmington, MI</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section bg-light">
+  <section id="about" class="section bg-light text-center">
     <div class="container">
-      <h2 class="mb-5 text-center">About Me</h2>
+      <h2 class="mb-5">About Me</h2>
       <div class="row justify-content-center">
         <div class="col-md-10">
           <p class="lead">
-            I am a highly skilled and motivated Java Full Stack Developer with over 8 years of experience in building scalable, secure, and performance-driven web applications.
-            I've contributed to major projects across industries like Automotive (Ford), Banking (JPMorgan Chase), and Healthcare (Apollo Hospitals).
+            I'm a passionate Java Full Stack Developer with 8+ years of experience delivering full lifecycle software development for diverse industries including automotive, finance, and healthcare. I specialize in building robust backend microservices using Java (8–17), Spring Boot, and integrating with modern frontend frameworks like ReactJS and Angular.
           </p>
           <p>
-            My core stack includes Java (8–17), Spring Boot, REST APIs, Angular (6–12), ReactJS, TypeScript, and Microservices architecture. I excel in cloud platforms such as AWS, Azure, and GCP, with strong proficiency in DevOps tools like Docker, Kubernetes, Jenkins, and GitHub Actions.
+            I have hands-on expertise in DevOps tools such as Jenkins, Docker, Kubernetes, and deployment on AWS, Azure, and GCP. Known for writing clean, scalable, and testable code, I'm also committed to agile best practices, CI/CD automation, and team collaboration.
           </p>
           <p>
-            I work in Agile/Scrum environments, focusing on clean architecture, test-driven development, and CI/CD pipelines. I enjoy problem-solving and optimizing solutions for performance and maintainability.
-            Whether it's designing an API contract, debugging production issues, or mentoring juniors, I bring passion and professionalism to the table.
+            My mission is to build secure, efficient, and user-centric solutions that solve real-world problems. I’m a strong communicator who thrives in collaborative environments and continuously seeks to upgrade my tech skills.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section text-center">
+  <section id="skills" class="section services text-center">
     <div class="container">
       <h2 class="mb-5">Core Skills</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card p-4">
-            <i class="bi bi-code-slash fs-1 mb-3"></i>
-            <h5>Frontend Development</h5>
+            <h5>Frontend</h5>
             <p>ReactJS, Angular (6–12), TypeScript, HTML5, CSS3, Bootstrap, Tailwind</p>
+            <h5>Backend</h5>
+            <p>Java (8–17), Spring Boot, Spring MVC, Microservices, REST APIs, Hibernate</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card p-4">
-            <i class="bi bi-server fs-1 mb-3"></i>
-            <h5>Backend Development</h5>
-            <p>Java (8–17), Spring Boot, Microservices, Hibernate, REST APIs, JPA</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <i class="bi bi-cloud-arrow-up fs-1 mb-3"></i>
             <h5>Cloud & DevOps</h5>
-            <p>AWS, Azure, Docker, Kubernetes, Jenkins, GitHub Actions</p>
+            <p>AWS (EC2, S3, Lambda, CloudFormation), Azure, GCP</p>
+            <p>Docker, Kubernetes, Jenkins, GitHub Actions, GitLab CI/CD</p>
           </div>
         </div>
-      </div>
-      <div class="row g-4 mt-4">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="card p-4">
-            <i class="bi bi-shield-check fs-1 mb-3"></i>
-            <h5>Security & Testing</h5>
-            <p>OAuth 2.0, JWT, Spring Security, JUnit, Mockito, Selenium, Postman, JMeter</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card p-4">
-            <i class="bi bi-graph-up fs-1 mb-3"></i>
-            <h5>Monitoring & Logging</h5>
-            <p>ELK Stack, Prometheus, Grafana, Log4j</p>
+            <h5>Tools & Testing</h5>
+            <p>Maven, Gradle, Git, Postman, JMeter, JUnit, Selenium, Mockito</p>
+            <p>Monitoring: Prometheus, Grafana, ELK Stack</p>
+            <p>Security: Spring Security, OAuth2, JWT</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section bg-light text-center">
+  <section id="projects" class="section projects text-center">
     <div class="container">
       <h2 class="mb-5">Key Projects</h2>
       <div class="row g-4">
@@ -164,7 +144,7 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Ford Motor Company</h5>
-              <p>Built Java 17 microservices, ReactJS front-end, secured with OAuth2/JWT. Integrated Kafka and Kubernetes for scalable deployment on AWS.</p>
+              <p>Developed scalable and secure microservices using Java 17 and Spring Boot. Created dynamic UIs using ReactJS. Integrated Kafka for real-time data streaming. Dockerized services deployed in AWS Kubernetes clusters.</p>
             </div>
           </div>
         </div>
@@ -172,7 +152,7 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">JPMorgan Chase</h5>
-              <p>Created scalable microservices and UIs for banking apps. Implemented CI/CD pipelines using Jenkins and Docker, ensured security via OAuth2.</p>
+              <p>Delivered enterprise banking applications using Spring Boot and Angular. Managed authentication with Spring Security and JWT. Set up CI/CD with Jenkins and GitHub. Implemented Kafka messaging and cloud deployment pipelines.</p>
             </div>
           </div>
         </div>
@@ -180,7 +160,7 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Apollo Hospitals</h5>
-              <p>Developed healthcare platforms using Spring Boot & Angular 8. Ensured HIPAA compliance, secure access, and API integrations with lab systems.</p>
+              <p>Built Angular frontends and REST APIs to digitize patient record systems. Ensured HIPAA compliance and data privacy. Integrated 3rd party services using OAuth2 and developed backend with Spring Boot and MySQL.</p>
             </div>
           </div>
         </div>
@@ -188,7 +168,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section bg-dark text-white text-center">
     <div class="container">
       <h2 class="mb-4">Let's Connect</h2>
@@ -199,7 +178,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center">
     <div class="container">
       <p class="mb-0">&copy; 2025 Yogiram Kotaparthi. All Rights Reserved.</p>
